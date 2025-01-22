@@ -1,0 +1,7 @@
+# Paradigma, dadaísmo epistemológico y programas de investigación {#sec-epistemologia}
+
+## Reconstrucción de la Epistemología en la segunda mitad del siglo XX
+
+No es que el racionalismo ahora sea malo, es que pertenece a la ciencia del siglo XIX no a la del XXI, pero lo hemos conservado por el error de concebir la historia como racional y lo racional como un bien. Feyerabend en [Tratado Contra el Método]{.smallcaps} afirma que todo vale porque no hay un método infalible; ahora bien, también cuestiona la relación entre Estado y Ciencia (la ciencia como institución dogmática) y pone de manifiesto una realidad, a veces muy incomoda para los racionalistas, que la Ciencia es una actividad humana y por tanto también se compone de mitos, y no de verdades absolutas:
+
+>> «El mito carece por tanto, de toda relevancia objetiva; continúa existiendo debido sólo al esfuerzo de la comunidad de creyentes y de sus dirigentes, sean éstos sacerdotes o ganadores del premio Nobel. Este, creo, es el argumento más decisivo contra cualquier método, sea empírico o no, que fomente la uniformidad. Cualquier método de este tipo es, en último término, un método fraudulento. Refuerza un conformismo oscurantista, mientras habla de la verdad; conduce a un deterioro de las capacidades intelectuales, del poder de la imaginación, mientras habla de conocimiento profundo; destruye el don más precioso de la juventud ---su enorme poder de imaginación--- y habla de educación» [@FeyerabendMetodo].

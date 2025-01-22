@@ -1,0 +1,53 @@
+# Resultados
+
+ Imaginemos que estamos evaluando el impacto de tres variables independientes sobre una variable dependiente `Y`:
+
+- `X1`: Número de horas de estudio.
+- `X2`: Nivel de motivación (escala de 1 a 10).
+- `X3`: Edad del participante.
+
+El modelo es:  
+$$Y = \beta_0 + \beta_1 \cdot X1 + \beta_2 \cdot X2 + \beta_3 \cdot X3 + \varepsilon$$
+
+### Código en R para generar el modelo lineal
+```R
+# Datos ficticios
+set.seed(123)
+data <- data.frame(
+  X1 = rnorm(100, mean = 5, sd = 2),  # Horas de estudio
+  X2 = runif(100, min = 1, max = 10), # Nivel de motivación
+  X3 = rnorm(100, mean = 25, sd = 5), # Edad
+  Y  = rnorm(100, mean = 50, sd = 10) # Variable dependiente
+)
+
+# Modelo lineal
+modelo <- lm(Y ~ X1 + X2 + X3, data = data)
+
+# Resumen del modelo
+summary(modelo)
+
+# Crear una tabla de resultados
+library(broom)
+resultados <- tidy(modelo)
+resultados
+```
+
+### Tabla de resultados del modelo
+Imaginemos que los resultados obtenidos son los siguientes:
+
+| **Predictor**  | **Estimación ($\beta$)** | **Error Estándar** | **Valor t** | **Valor p** |
+|-----------------|---------------------------|---------------------|-------------|-------------|
+| Intercepto ($\beta_0$) | 42.105               | 4.568               | 9.214       | < 0.001     |
+| Horas de estudio ($X_1$) | 3.254                | 0.789               | 4.123       | < 0.001     |
+| Motivación ($X_2$)      | 1.587                | 0.623               | 2.548       | 0.013       |
+| Edad ($X_3$)            | -0.452               | 0.172               | -2.628      | 0.010       |
+
+### Interpretación de los resultados
+1. **Intercepto ($\beta_0$)**: Cuando todas las variables independientes son iguales a 0, el valor esperado de $Y$ es 42.105.
+2. **Horas de estudio ($X_1$)**: Por cada hora adicional de estudio, el valor de $Y$ aumenta en promedio 3.254 unidades, manteniendo constantes las demás variables. Este efecto es estadísticamente significativo ($p < 0.001$).
+3. **Motivación ($X_2$)**: Por cada unidad adicional en el nivel de motivación, $Y$ aumenta en promedio 1.587 unidades ($p = 0.013$).
+4. **Edad ($X_3$)**: Por cada año adicional de edad, $Y$ disminuye en promedio 0.452 unidades ($p = 0.010$).
+
+### Conclusión
+El modelo sugiere que las horas de estudio y el nivel de motivación tienen un efecto positivo significativo sobre $Y$, mientras que la edad tiene un efecto negativo. El intercepto indica el valor base de $Y$ en ausencia de las variables predictoras.
+

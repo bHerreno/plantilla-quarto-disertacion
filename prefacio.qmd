@@ -1,0 +1,22 @@
+---
+title: "Prefacio"
+---
+
+<!-- \ linenumbers -->
+
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+<!-- \setlength\itemsep{5em} -->
+
+# Prefacio {.unnumbered}
+
+¿Es posible imaginar más allá de los límites del capitalismo? «Es más fácil imaginar un fin al mundo que un fin al capitalismo» [@fisher2016realismo, p.22]. Esta frase, atribuida tanto al filósofo esloveno Slavoj Žižek como al estadounidense Fredric Jameson, nos recuerda una amarga verdad que como científicos no debemos olvidar: el cambio climático y nuestra responsabilidad en el mismo no son ajenos a nuestra propia cultura y sociedad.
+
+En este libro, se exploran las intersecciones entre la crisis climática, la biodiversidad y las construcciones culturales que moldean nuestra percepción del mundo natural. Este no es solo un análisis científico, sino también un intento de reflexionar sobre los relatos que hemos construido colectivamente para justificar nuestras acciones, o la falta de ellas, frente a una crisis de proporciones globales.
+
+Es necesario reconocer que la ciencia, aunque esencial, no opera en un vacío cultural. Los conceptos de progreso, crecimiento y desarrollo han sido pilares fundamentales del discurso moderno, pero también han contribuido a la explotación sin precedentes de los recursos naturales y al colapso de los sistemas ecológicos. En palabras de Bruno Latour: «Las cosas, también ellas, tienen derecho a la dignidad de ser relatos».
+
+Este prefacio pretende ser una invitación, no solo a leer, sino a reflexionar críticamente sobre los límites de nuestra imaginación y la posibilidad de construir nuevas narrativas. Narrativas que no solo nos permitan comprender nuestra relación con el planeta, sino también transformarla en una relación de cuidado, reciprocidad y respeto.
+
+Finalmente, agradezco a todas las personas que han contribuido directa o indirectamente a este trabajo, en particular a quienes, desde sus disciplinas, han enriquecido esta perspectiva interdisciplinaria. Espero que este libro sea un paso hacia la construcción de un relato más inclusivo y esperanzador para nuestro futuro compartido.

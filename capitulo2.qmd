@@ -1,0 +1,97 @@
+# Bibliometría: un método para monitorizar el estado de un paradigma {#sec-metodologia}
+
+Uno de los nuevos métodos que ha surgido es el análisis bibliométrico, el cual permite monitorizar y crear ideas de conjunto sobre que se está haciendo actualmente en diferentes disciplinas [@Donthu_2021]. Dentro del análisis bibliométrico y del ecosistema `R` destaca `bibliometrix`, una biblioteca de funciones que analiza datos descargados desde diferentes bases de datos bibliográficas como *Scopus* o *Web of Sciences* [@bibliometrix].
+
+
+```{r}
+#| label: fig-paradigma4
+#| fig.cap: |
+#|   Ejemplificación de los posibles estados de un paradigma
+#|   en función de las publicaciones a lo largo del tiempo.
+#|   Esta información es indicativa, pero nunca determinante debido a la historia externa.
+#| fig-height: 7 
+#| out-width: 90%
+#| dev: 'png'
+
+
+library( ggplot2 )
+library( gridExtra )
+
+x <- 2000:2020
+y1 <- exp( 0.15 * 1:21 )
+y2 <- 25 * exp( -0.15 * 1:21 )
+y3 <- c( rep( 21, 5 ), rep( 20,16 ) )
+y4 <- c( 15:21, 14, 14, 14, 10:7, 7:13 )
+
+tit1 <- "Paradigma en expansión"
+tit2 <- "Paradigma en recesión"
+tit3 <- "Paradigma estancado"
+tit4 <- "Paradigma recesivo en expansión"
+
+
+ytit <- "Nº Publicaciones"
+xtit <- "Año"
+
+mxpub <- 25
+
+df <- data.frame( x = x,
+                  y1 = y1,
+                  y2 = y2,
+                  y3 = y3,
+                  y4 = y4 )
+
+# Crear la primera subimágen
+plot1 <- ggplot( df, aes(x = x, y = y1 ) ) +
+  geom_point() +
+  geom_line() +
+  ylim( 0, mxpub ) +
+  xlab( "Año" ) +
+  ylab( "Núm publicaciones" ) +
+  theme( axis.text.y = element_blank() ) +
+  labs(title = tit1 )
+
+# Crear la segunda subimágen
+plot2 <- ggplot( df, aes(x = x, y = y2 ) ) +
+  geom_point() +
+  geom_line() +
+  ylim( 0, mxpub ) +
+  xlab( "Año" ) +
+  ylab( "Núm publicaciones" ) +
+  theme( axis.text.y = element_blank() ) +  
+  labs(title = tit2 )
+
+# Crear la tercera subimágen
+plot3 <- ggplot( df, aes( x = x, y = y3 ) ) +
+  geom_point() +
+  geom_line() +
+    ylim( 0, mxpub ) +
+  xlab( "Año" ) +
+  ylab( "Núm publicaciones" ) + 
+  theme( axis.text.y = element_blank() ) +
+  labs( title = tit3 )
+
+# Crear la cuarta subimágen
+plot4 <- ggplot( df, aes( x = x, y = y4 ) ) +
+  geom_point() +
+  geom_line() +
+    ylim( 0, mxpub ) +
+  xlab( "Año" ) +
+  ylab( "Núm publicaciones" ) +
+  theme( axis.text.y = element_blank() ) +
+  labs( title = tit4 )
+
+# Organizar las subimágenes en una cuadrícula
+grid.arrange( plot1, plot2, plot3, plot4, nrow = 2, ncol = 2 )
+
+
+# par(mfrow = c(2, 2))
+# pub<- as.integer(1:21)
+# plot (c(2000:2020), pub, type= "o", main = "Paradigma en expansión", ylim = c(0, 21),ylab = "Nº Publicaciones", xlab = "Año")
+# 
+# plot (c(2000:2020), c(pub[21:1]), type= "o", main="Paradigima en recesión",  ylim = c(0, 21),ylab = "Nº Publicaciones", xlab = "Año")
+# 
+# plot (c(2000:2020), c(rep(pub[21],5),rep(pub[20],16)), type= "o", main="Paradigma estancado", ylim = c(0, 21),ylab = "Nº Publicaciones", xlab = "Año")
+# 
+# 
+# plot (c(2000:2020), c(pub[c(15:21,14,14,14,10:7,7:13)]), type= "o", main= "Paradigma regresivo en expansión ", ylab = "Nº Publicaciones", xlab = "Año")
+```

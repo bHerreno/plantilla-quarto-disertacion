@@ -1,0 +1,98 @@
+project:
+  type: book
+
+book:
+  title: "Título del libro"
+  subtitle: "Subtítulo descriptivo"
+  author: "Nombre del Autor"
+  date: today
+
+  chapters:
+    - "index.qmd"
+    - "prefacio.qmd"
+    - "capitulo1.qmd"
+    - "capitulo2.qmd"
+    - "resultados.qmd"
+    - "referencias.qmd"
+
+format:
+    pdf:
+      documentclass: scrreprt
+      number-sections: true
+      fontsize: 13pt
+      papersize: a4
+      number-depth: 3
+      fig-align: "center"
+      fig-pos: "t"
+      toc: true
+      lof: true
+      lot: true
+      fig-width: 9
+      classoption: headings=small
+    # html:
+    #   theme: cosmo
+    #   number-sections: true
+    #   number-depth: 6
+    #   default-image-extension: svg
+    #   fig-align: "center"
+
+classoption: "twoside,openright"
+linestretch: 1.1
+geometry:
+  # - showframe
+  - left=3cm
+  # - textwidth=12cm
+  - right=2.5cm
+  - top=2cm
+  - bottom=3.5cm
+  # - marginparsep=5mm
+  # - marginparwidth=5cm
+  - footskip=10mm
+
+lang: "es"
+language:
+  es:
+  toc-title-document: "Índice de contenidos"
+crossref-lof-title: "Índice de figuras"
+crossref-lot-title: "Índice de tablas"
+
+bibliography: referencias.bib
+csl: science.csl
+
+execute: 
+  echo: false
+warning: false
+
+header-includes:
+  - \usepackage{tikz}
+  - \usetikzlibrary{trees}
+  - \usetikzlibrary{shapes.geometric}
+  - \usetikzlibrary{positioning}
+  - \usetikzlibrary{shapes,arrows}
+  - \usepackage{lineno}
+  - \usepackage{geometry}
+  - \usepackage{mhchem}
+  - \usepackage[margin=10pt, font=small, labelfont=bf]{caption}
+  - \usepackage{enumitem}
+  - \setlist{itemsep=0pt}
+  - \deffootnote[3em]{1em}{9em}{~\textsuperscript{\thefootnotemark}}
+  - \renewcommand*{\chapterformat}{\thechapter.\ }
+
+include-before-body: 
+  text: |
+    \pagestyle{plain}
+    \pagenumbering{roman}
+    \ 
+    \pagestyle{empty} \newpage
+    \ \vfill
+    \ \hfill Muchas gracias.
+    \vfill
+    \ \newpage
+    \ \vfill
+    \ \hfill «Las cosas, también ellas, tienen derecho a la dignidad de ser relatos».
+
+    \ \hfill ---Bruno Latour, 1991 \ 
+    \vfill \newpage \ \newpage
+    \pagestyle{plain}
+    \setcounter{page}{1}
+    

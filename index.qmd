@@ -1,0 +1,11 @@
+# Agradecimientos {-}
+
+\renewcommand{\contentsname}{Contenidos}
+\renewcommand{\listtablename}{Relación de tablas}
+\renewcommand{\listfigurename}{Relación de figuras}
+\renewcommand{\tablename}{Tabla} 
+\renewcommand{\figurename}{Figura}
+
+Como redactar unos agradecimientos sin parecer un político en campaña es casi más difícil que defender las ideas propias ante un tribunal. Una tesis doctoral no es solo un periodo de unos pocos años, es el culmen de una vida de estudiante, son tantos los profesores, maestros y amigos sin los que nunca hubiera podido cultivarme como persona que daría para escribir unas memorias.
+
+ \cleardoublepage
